@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="image/jpg" href="./assets/favicon.jpg" />
+  <link href="./css/style.css" rel="stylesheet" />
+  <title>Infinite Scrolling</title>
+</head>
+
+<body>
+  <nav class="isl_infinite-topnav">
+    <button disabled aria-disabled="true" class="isl_icon-button">
+      <svg height="20px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="20px"
+        xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
+      </svg>
+    </button>
+    <header class="title" aria-label="messages">Messages</header>
+  </nav>
+
+  <main class="isl_main-container">
+    <section class="isl_content-container">
+      <div id="isl_loading-top"></div>
+      <section id="isl_content-section"></section>
+      <div id="isl_loading-bottom"></div>
+    </section>
+  </main>
+
+  <!--   Template for cards -->
+  <template id="output">
+    <article class="card">
+      <section class="card_avatar_info">
+        <figure class="card_author_image">
+          <img src="#" alt="" />
+        </figure>
+        <section class="card_author_info">
+          <strong></strong>
+          <time></time>
+        </section>
+      </section>
+      <section class="card_author_message"></section>
+      <section id="card_swipe_overlay"></section>
+    </article>
+  </template>
+
+  <!--  attach javascript bundle -->
+  <script src="./dist/app.bundle.js"></script>
+</body>
+
+</html>
